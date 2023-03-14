@@ -370,3 +370,65 @@ C:\Users\DELL\.ssh
 
 这条命令是生成ssh密钥，生成的两个文件中.pub后缀的是公钥，另一个是密钥，不能公开。
 
+把公钥的内容复制到自己的github上.
+
+```
+$ ssh -T git@github.com     //验证是否可以通过ssh连接到github
+```
+
+![1678758449344](git.assets/1678758449344.png)
+
+表示本地主机成功连接到github。
+
+![1678758714567](git.assets/1678758714567.png)
+
+如果是上面这样的话
+
+```
+cd ~/.ssh
+vim config
+```
+
+编辑以下内容
+
+```
+Host github.com
+User git
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+
+Host gitlab.com
+Hostname altssh.gitlab.com
+User git
+Port 443
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+```
+
+再次回到项目目录检查是否成功
+
+```
+ssh -T git@github.com
+```
+
+接下来将本地仓库和github仓库进行连接。
+
+先在本地创建仓库，然后在github上创建空仓库(必须是空的)
+
+然后将github上仓库的ssh链接复制下来
+
+然后输入
+
+```
+git remote add origin git@github.com:123456789sxc/note.git
+```
+
+remote可以看做是一个人的电脑，假设有十个人合作，那么就有10个remote对象。为了方便大家同步，我们创建一个叫做origin的remote，大家都和这个origin同步，那么大家就可以达成一致了。因此这条命令指的是把远程仓库作为项目服务器，所有人的项目都会更新到这个仓库。
+
+```
+`$ git push -u origin master`
+```
+
+上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。
