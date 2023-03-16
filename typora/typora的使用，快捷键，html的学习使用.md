@@ -26,3 +26,11 @@ ctrl+shift+Q   引用    可以用来当小标题
 
 
 
+让html代码生效：直接写html就行，自己会生效，不要放到代码行或代码块里。
+
+居中html代码
+
+`<center>****</center>`
+
+<center>Impressions of after-reading of Dive into deep learning</center>
+

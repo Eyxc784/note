@@ -55,10 +55,24 @@ pip install jupyter d2l torch torchvision
 
 ```
 conda activate d2l-zh
+conda install ipykernel  //在虚拟环境中安装jupyter使用的必要插件
+
+python -m ipykernel install --name Name 将环境添加到Jyputer中（Name是此环境显示在Jyputer中的名称，可自定义，我定义的Name是d2l-zh）
 ```
 
 8. 输入jupyter notebook
 
+进去后，切换内核为d2l-zh
+
+![1678794499788](DeepLearningSetup.assets/1678794499788.png)
+
 就配置成功了。
 
 不熟悉jupyter的人需要注意，命令行窗口不能关。
+
+初次配置完成后，下次进入jupyter的步骤如下：
+
+1. 进入d2l-zh路径，再该路径下打开cmd
+2. 输入jupyter notebook
+3. 在jupyter中切换内核为d2l-zh
+
