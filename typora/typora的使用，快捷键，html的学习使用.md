@@ -34,3 +34,13 @@ ctrl+shift+Q   引用    可以用来当小标题
 
 <center>Impressions of after-reading of Dive into deep learning</center>
 
+
+
+latex
+
+| 除法 | \frac{a}{c} | $ \frac{a}{c}$                            |
+| ---- | ----------- | ----------------------------------------- |
+| 对数 | \log_ax     | log以a为底，以x为真数。l小写    $\log_ax$ |
+|      | \Ln x       | log以e为底，以x为真数。 L大写     $\In x$ |
+|      | \lg x       | log以10为底，以x为真数。       $\lg x$    |
+
