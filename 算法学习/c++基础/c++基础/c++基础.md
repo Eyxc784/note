@@ -50,13 +50,58 @@ c++基础
 
 ## 字符串
 
-```c++
-#include <string>
+也算学完了c++，找个时间看一下string的源码解析。[源码分析C++的string实现 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/267896855)
 
-string s = "";  //字符串必须初始化
-cin >> s;
-s.length()   // 返回字符串s的长度
+1. 头文件
+
+```cpp
+#include <string>
 ```
+
+2. string的创建
+
+```cpp
+string s1;     //未初始化，默认是空字符串，即""
+string s2 = "c plus plus";   //初始化
+```
+
+3. string与c语言字符串的区别
+
+   **string是一个类，而char是基本数据类型**
+
+   string类的字符串不以 字符'\0' 结尾
+
+4. string的输入输出cin、cout
+
+5. 访问string中的字符用下标运算符[]
+
+   需要注意一个问题：s[i] 是什么类型的？
+
+   ```cpp
+   string s = "niubi666";
+   ```
+
+   
+
+5. 字符串的拼接用运算符  + 或 +=
+
+6. string类的成员函数
+
+   1. replace
+
+   ```cpp
+   1. string& replace(size_t pos, size_t n, const char *s);//将当前字符串从pos索引开始的n个字符，替换成字符串s。pos是第一个
+   
+   2. string& replace(size_t pos, size_t n, size_t n1, char c); //将当前字符串从pos索引开始的n个字符，替换成n1个字符c
+   
+   3. string& replace(iterator i1, iterator i2, const char* s);//将当前字符串[i1,i2)区间中的字符串替换为字符串s
+   ```
+
+   replace()会对源字符串进行更改，另外，返回的也是修改后的字符串
+
+
+
+
 
 ## 位运算符
 
