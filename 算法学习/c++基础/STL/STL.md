@@ -4,6 +4,8 @@ STL 是“Standard Template Library”的缩写，中文译为“标准模板库
 
 ## container
 
+序列式容器：容器内的元素是有线性顺序的，而且这个线性顺序就是存储顺序。
+
 ### vector
 
 vector 实现的是一个动态数组，即可以进行元素的插入和删除，在此过程中，vector 会动态调整所占用的内存空间，整个过程无需人工干预。
@@ -173,6 +175,42 @@ deque<int> 变量名;
 
 
 
+关联式容器：容器内的元素是<key，value>的形式
+
+### pair类模板
+
+头文件
+
+```cpp
+#include <utility>
+using namespace std;
+```
+
+创建对象
+
+```cpp
+pair<数据类型，数据类型> p;  //数据类型可以是基本数据类型、结构体、类自定的类型
+```
+
+输入值，创建成一个新元素`<first, second>`
+
+```cpp
+pair<int,int> p;
+scanf("%d%d",&p.first,&p.second);   // pair类对象p的第一个元素用 p.first 访问，第二个元素用 p.second 访问
+```
+
+pair类型的使用相当的繁琐，如果定义多个相同的pair类型对象，可以使用typedef简化声明：
+
+```cpp
+typedef pair<string,string> Author;
+Author proust("March","Proust");
+Author Joy("James","Joy");
+```
+
+有时候，我们会需要创建一个pair类的数组，然后用sort函数对pair类进行排序。
+
+**当使用sort函数对pair进行排序的时候，会先对first进行排序，如果first相同再对second进行排序。**
+
 
 
 ### map
@@ -254,7 +292,8 @@ using namespace std;
 int main()
 {
     map<int,bool> map1;
-    if(map1[1])   //如果map中没有这个元素，返回false，if循环内的语句就不执行。
+    if(map1[1])   //map[1] 如果不存在，会将(关键字1,0)加入到map1这个字典中，然后if根据map1[1]的值是否为0，选择是否执行if内的语句
+        //如果map中没有这个元素，返回false，if内的语句就不执行。
 }
 ```
 
