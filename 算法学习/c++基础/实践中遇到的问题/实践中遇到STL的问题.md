@@ -16,6 +16,10 @@ bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
 
 > matrix.size()是行数；matrix[0].size()是列数
 
+
+
+
+
 🤣同样是这个题，有这样一个样例 matrix = [[]]
 
 可知matrix.size() == 1, matrix[0].size == 0
@@ -24,7 +28,7 @@ bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
 
 `runtime error: reference binding to null pointer of type 'int' (stl_vector.h)` 
 
-解决办法：在使用了matrix\[i][j]的语句前，加上判断 if(matrix.size()!=0&&matrix[i].size()!=0)
+解决办法：**在使用了matrix\[i][j]的语句前，加上判断 if(matrix.size()!=0&&matrix[i].size()!=0)**
 
 第一个matrix.size()!=0是防止这样的样例，matrix = []
 
@@ -33,4 +37,44 @@ bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
 
 
 
+
+🤣题目是这样的，给我一个二维数组，要求我用vector<vector\<int>>来存储，按行输入
+
+```cpp
+int main()
+{
+    int n,m;
+    cin >> n >> m;  //n表示行数,m表示列数
+    vector<vector<int>> s;
+    for(int i = 0;i < n;i++)
+    	for(int j = 0;j < m;j++)
+            cin >> s[i][j];
+    //上述代码是错误的，能看出来哪里错了吗
+}
+```
+
+我们定义的二维数组s并没有进行初始化，我们定义的这个s没有给他分配存储空间
+
+正确的代码如下，应该再定义一个临时一维数组
+
+```cpp
+int main()
+{
+    int n,m;
+    cin >> n >> m;
+    vector<vector<int>> s;
+    vector<int> t;
+    for(int i = 0;i < n;i++)
+    {
+        t.clear();
+        for(int j = 0;j < m;j++)
+        {
+            int a;
+            cin >> a;
+            t.push_back(a);
+        }
+        s.push_back(t);
+    }
+}
+```
 

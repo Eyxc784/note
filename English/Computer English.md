@@ -6,9 +6,8 @@ commit  提交
 SCM  points to Source Code Management  源代码管理
 patch 补丁
 
-
 build   常见的意思是建造
-另一个不常见作名词但是计算机中常用的意思是       build的东西
+另一个不常见,作名词但是计算机中常用的意思是       build的东西
 在一个project中
 Build（构建）通常包含了将源代码转换为可执行文件的整个过程，因此名词build就是指生成的这个可执行文件
 常见于app的官网，版本号里面的Build说明这个版本是第几次build完生成的exe，它后面一般跟数字或日期
@@ -105,3 +104,56 @@ one of two or more words or expressions of the same language that have the same 
 
 
 Traversal n.遍历
+
+
+
+codeforces上的handle是指用户名username
+
+handle
+
+**a name that someone is known by on the social media**
+
+n.(门)把手
+
+vt.处理
+
+
+
+碰见下面三个长得像的单词
+
+codeforces 的 submit
+
+git commit 
+
+还有一个summit
+
+
+
+submit
+
+to give or offer something for a decision to be made by others
+
+submit sth. to sb.
+
+把sth提交给sb(，让sb来决定)
+
+还有  屈服、投降、顺从 的意思
+
+commit
+
+**共四种用法:**
+*1、* *犯错、犯罪*
+*2、* *把……交给……*
+*3、* *承诺做某事、坚定不移做某事*
+*4、* *在某事上表态*
+
+1. commit是 vt，后跟犯的罪
+2. commit sth to sth
+
+summit  n.峰会
+
+峰会指高峰会议，an important formal meeting between leaders of governments from two or more countries
+
+![1682842557509](Computer English.assets/1682842557509.png)
+
+**Oops** 相当于"哎呀”。经常带着“自我吃惊”的意思。有时候也会带抱歉的意思，但是一般来说这个词不能代替真正的抱歉。
