@@ -1,5 +1,9 @@
 实践中遇到STL的问题
 
+<font size = 5>报错原因：vector在还没有分配任何空间时还不能像数组一样用下标形式去访问vector的（v[0]也不行）！！！否则编译通过但报运行错误runtime error！</font>
+
+
+
 ```cpp
 bool findNumberIn2DArray(vector<vector<int>>& matrix, int target) {
 
