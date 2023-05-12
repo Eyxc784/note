@@ -487,6 +487,14 @@ unordered_set<string> s;
 
 
 
+哈希表不能让vector作为数据的元素，也就是
+
+```cpp
+unordered_set<vector<int>> s;  //会报错
+```
+
+因为c++没有提供
+
 # adapter
 
 ### stack
