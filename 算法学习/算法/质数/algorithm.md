@@ -163,7 +163,7 @@ void get_primes(int n)
 
 在上述代码中，当i = 2 时，筛掉了 6，当 i  = 3 时 ，又筛了一次 6
 
-
+线性筛法在被最小质因数筛去之后就不再筛了。
 
 线性筛法:
 
@@ -172,8 +172,8 @@ void get_primes(int n)
 {
     for(int i = 2;i<=n;i++)   //for循环是用来判断每一个数是不是质数的
     {
-        if(!st[i]) primes[cnt ++ ] = i;  //如果是质数就放入primes中
-        for(int j = 0;primes[j] <= n / i;j++)   //遍历质数数组primes，注意primes中的质数是从小到大遍历的
+        if(!st[i]) primes[cnt ++ ] = i;  //如果i是质数就放入primes中
+        for(int j = 0;primes[j] <= n / i;j++)   //从小到大遍历质数数组primes
         { //循环条件是指 primes[j] * i <= n,即合数筛到小于n就可以了。
             st[primes[j] * i] = true;  //  循环中j在增加，质数在变，primes[j] * i 是筛合数
             if(i % primes[j] == 0) break;    //因为i是用来遍历每一个数的，如果这个数已经被筛出来了，只要i是这些质数的倍数就可以直接下一个i了。
