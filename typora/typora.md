@@ -2,9 +2,12 @@ typora的使用，快捷键，html的学习使用
 
 [Typora_Markdown_图片标题(题注)_markdown图标题_Ladybug_的博客-CSDN博客](https://blog.csdn.net/m0_47098916/article/details/117827687)
 
+> 找一个好看的主题，能让程序员爱上写md笔记
+>
 
+**https://theme.typora.io/**
 
-
+[Typora常用好看主题推荐!!!_typora主题-CSDN博客](https://blog.csdn.net/weixin_52023681/article/details/120251523)
 
 快捷键
 
@@ -203,5 +206,23 @@ ctrl+shift+Q   引用    可以用来当小标题
 
 
 
+[(10 封私信 / 16 条消息) markdown中插入图片怎么定义图片的大小或比例？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/23378396)
+
+![1715999813636](typora.assets/1715999813636.png)
+
+<style>
+    img{
+        width: 60%;
+        padding-left: 20%
+    }
+</style>
+
+![1716000408309](typora.assets/1716000408309.png)
 
 
+
+typora生成目录树
+
+[Markdown使用-生成目录树 - 福宝心心 - 博客园 (cnblogs.com)](https://www.cnblogs.com/zyrb/p/15226918.html)
+
+[Windows命令生成文件夹目录树状结构_在d盘根目录下,创建如图2-1所示树形目录结构。截图文件夹窗口左侧资源管理器,显示-CSDN博客](https://blog.csdn.net/qq_41076577/article/details/110557064#:~:text=Windows命令生成文件夹目录树状结构 1 在电脑操作系统的开始菜单中，搜索cmd或者直接使用WIN%2BR快捷键组合，直接打开命令行运行程序。 2 打开命令行程序 点击确定或者使用回车键，即可打开cmd、命令行运行程序。 3 进入文件目录,使用tree命令生成树形结构 分别使用以下命令：tree、tree %2Ff 命令，就可以看到屏幕的效果了，还可以使用tree %2Fa等命令，来生成想要的文件目录。 6 导出生成的文件目录 )
